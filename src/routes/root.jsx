@@ -11,7 +11,7 @@ export default function Root() {
       <div className="container">
         <Navbar bg="light" expand="lg">
           <Container>
-            <Navbar.Brand href="/">Tito Rodda</Navbar.Brand>
+            <Navbar.Brand href="/Plot">Tito Rodda</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav"/>
             <Navbar.Collapse id="basic-navbar-nav">
               <Nav className="me-auto">

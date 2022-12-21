@@ -1,7 +1,7 @@
 {
   "name": "finale",
   "version": "0.1.0",
-  "homepage": "https://t1grimm.github.io/t1grimm.github.io",
+  "homepage": "https://t1grimm.github.io/finale",
   "private": true,
   "dependencies": {
     "@emotion/react": "^11.10.5",
@@ -16,6 +16,7 @@
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
     "react-pdf": "^6.2.0",
+    "react-plot": "^1.4.2",
     "react-plotly.js": "^2.6.0",
     "react-router-dom": "^6.5.0",
     "react-scripts": "^5.0.1",
