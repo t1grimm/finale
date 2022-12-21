@@ -1,13 +1,13 @@
 {
-  "main.css": "/react-gh-pages/static/css/main.f04334ee.chunk.css",
-  "main.js": "/react-gh-pages/static/js/main.5f0f387f.chunk.js",
-  "main.js.map": "/react-gh-pages/static/js/main.5f0f387f.chunk.js.map",
-  "static/js/1.3bdd3dde.chunk.js": "/react-gh-pages/static/js/1.3bdd3dde.chunk.js",
-  "static/js/1.3bdd3dde.chunk.js.map": "/react-gh-pages/static/js/1.3bdd3dde.chunk.js.map",
-  "runtime~main.js": "/react-gh-pages/static/js/runtime~main.346eb3ee.js",
-  "runtime~main.js.map": "/react-gh-pages/static/js/runtime~main.346eb3ee.js.map",
-  "static/css/main.f04334ee.chunk.css.map": "/react-gh-pages/static/css/main.f04334ee.chunk.css.map",
-  "index.html": "/react-gh-pages/index.html",
-  "precache-manifest.ffe6eb4d0472a8cdd92d75298e654322.js": "/react-gh-pages/precache-manifest.ffe6eb4d0472a8cdd92d75298e654322.js",
-  "service-worker.js": "/react-gh-pages/service-worker.js"
+  "files": {
+    "main.css": "/finale/static/css/main.25f42e59.css",
+    "main.js": "/finale/static/js/main.cc4b54f0.js",
+    "index.html": "/finale/index.html",
+    "main.25f42e59.css.map": "/finale/static/css/main.25f42e59.css.map",
+    "main.cc4b54f0.js.map": "/finale/static/js/main.cc4b54f0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.25f42e59.css",
+    "static/js/main.cc4b54f0.js"
+  ]
 }
