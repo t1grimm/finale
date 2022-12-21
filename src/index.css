@@ -1,15 +1,13 @@
-body {
-  font: 14px "Century Gothic", Futura, sans-serif;
-  margin: 20px;
-  background: bisque;
-}
+/*body {*/
+/*  font: 18px "Century Gothic", Futura, sans-serif;*/
+/*  margin: 20px;*/
+/*  background: bisque;*/
+/*}*/
 
-ol, ul {
-  padding-left: 30px;
-}
 
 .Card {
-  border: 2px solid green;
+  border: 20px solid green;
+  background: #ad9696;
 }
 
 .board-row:after {
@@ -26,15 +24,15 @@ ol, ul {
   background: #b06565;
   border: 1px solid #ad9696;
   float: left;
-  font-size: 34px;
+  font-size: 54px;
   font-weight: bold;
   line-height: 34px;
-  height: 54px;
+  height: 74px;
   margin-right: -1px;
   margin-top: -1px;
   padding: 0;
   text-align: center;
-  width: 54px;
+  width: 74px;
 }
 
 .square:focus {
@@ -42,7 +40,7 @@ ol, ul {
 }
 
 .kbd-navigation .square:focus {
-  background: #ddd;
+  background: #500303;
 }
 
 .game {
@@ -51,5 +49,4 @@ ol, ul {
 }
 
 .game-info {
-  margin-left:50%;
 }

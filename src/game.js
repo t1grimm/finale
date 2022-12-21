@@ -1,12 +1,14 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './index.css';
 import Card from '@mui/material/Card';
-import Container from 'react-bootstrap/Container';
-import Nav from 'react-bootstrap/Nav';
-import Navbar from 'react-bootstrap/Navbar';
-import NavDropdown from 'react-bootstrap/NavDropdown';
-import {Alert, Box, Button, CardActionArea, CardActions} from '@mui/material';
+import {
+    Alert,
+    Box,
+    Button, ButtonGroup,
+    CardActionArea,
+    CardActions, Divider,
+    Stack
+} from '@mui/material';
 
 
 function Square(props) {
@@ -50,10 +52,6 @@ class Board extends React.Component {
   }
 }
 
-class GameMob extends React.Component {
-
-}
-
 class GameMobius extends React.Component {
 
   handleClick(i) {
@@ -86,15 +84,30 @@ class GameMobius extends React.Component {
     const history = this.state.history;
     const current = history[this.state.stepNumber];
     const winner = calculateWinner(current.squares);
+    const buttonStyle = {color: "#8868ad",
+                         font: "Brush Script MT",
+                         alignItems: "center"}
 
     const moves = history.map((step, move) => {
       const desc = move ?
-          'Go to move #' + move :
+          'Back to move ' + move :
           'RESTART GAME';
       return (
-          <li key={move}>
-            <button onClick={() => this.jumpTo(move)}>{desc}</button>
-          </li>
+          <Box alignItems={"center"}
+              sx={{display: 'flex',
+                  '& > *': {m: 1,},
+                  alignItems:"center",
+              }}
+          >
+              <ButtonGroup
+                orientation="vertical"
+                aria-label="vertical contained button group"
+                variant="text"
+                key={move}
+              >
+                  <Button style={buttonStyle} onClick={() => this.jumpTo(move)}>{desc}</Button>
+              </ButtonGroup>
+          </Box>
       );
     });
 
@@ -106,36 +119,13 @@ class GameMobius extends React.Component {
     }
 
     return (
-        <div class="container">
-            <Navbar bg="light" expand="lg">
-                <Container>
-                    <Navbar.Brand href="#home">Tito Rodda</Navbar.Brand>
-                    <Navbar.Toggle aria-controls="basic-navbar-nav" />
-                    <Navbar.Collapse id="basic-navbar-nav">
-                      <Nav className="me-auto">
-                        <Nav.Link href="#home">Home</Nav.Link>
-                        <Nav.Link href="https://www.linkedin.com/in/titorodda/">Linkedin</Nav.Link>
-                        <NavDropdown title="Portfolio" id="basic-nav-dropdown">
-                          <NavDropdown.Item href="#action/3.1">Portfolio</NavDropdown.Item>
-                          <NavDropdown.Item href="#action/3.2">
-                            Another action
-                          </NavDropdown.Item>
-                          <NavDropdown.Item href="#action/3.3">Something</NavDropdown.Item>
-                          <NavDropdown.Divider />
-                          <NavDropdown.Item href="#action/3.4">
-                            Separated link
-                          </NavDropdown.Item>
-                        </NavDropdown>
-                      </Nav>
-                    </Navbar.Collapse>
-                  </Container>
-                </Navbar>
+        <div class="container m-0 p-0">
             <Alert severity="error">Unfortunately my site is down - but you can still play some tic-tac-toe</Alert>
             <div className="container">
-                <div className="d-flex justify-content-center p-lg-3">
+                <div className="d-flex justify-content-center p-md-5">
                     {status}
                 </div>
-                <div className="d-flex justify-content-center p-4">
+                <div className="d-flex justify-content-center mb-4">
                     <Card sx={{ maxWidth: 345 }}>
                       <CardActionArea>
                           <Board
@@ -145,9 +135,9 @@ class GameMobius extends React.Component {
                       </CardActionArea>
                     </Card>
                 </div>
-                <div className="flex justify-content-center p-lg-5">
-                    <ol class="list-group-item p-lg-5">{moves}</ol>
-                </div>
+                <Stack divider={<Divider orientation="horizontal" flexItem />}>
+                    {moves}
+                </Stack>
             </div>
         </div>);
   }
@@ -167,11 +157,11 @@ class Game extends GameMobius {
     };
   }
 }
-
+export default Game
 // ========================================
 
-const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<Game />);
+
+
 
 function calculateWinner(squares) {
   const lines = [
